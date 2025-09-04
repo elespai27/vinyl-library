@@ -1,0 +1,47 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+:root {
+  --vinyl-pink:   #FF0CF7;
+  --vinyl-lavender: #9EAAFF;
+  --vinyl-cyan:   #00FFF6;
+  --vinyl-green:  #4CD159;
+  --vinyl-purple: #4F21FF;
+  --vinyl-violet: #F2C2FF;
+  --vinyl-white: #FFFFFF;
+  --vinyl-navy:   #000C72;
+  --vinyl-yellow: #EBF500;
+  --vinyl-red:    #FF3157;
+  --vinyl-gray:   #707070;
+
+  // Paleta principal
+  --ion-color-primary: var(--vinyl-yellow);
+  --ion-color-secondary: var(--vinyl-lavender);
+  --ion-color-tertiary: var(--vinyl-cyan);
+  --ion-color-quaternary: var(--vinyl-pink);
+  --ion-color-quinary: var(--vinyl-violet);
+
+  // Backgrounds y acentos
+  --background-color: var(--vinyl-white);
+  --accent-color: var(--vinyl-yellow);
+
+  // Textos
+  --text-color-main: #000C72;
+  --text-color-secondary: #707070;
+  --text-color-accent: var(--vinyl-pink);
+
+  // Errores
+  --error-color: var(--vinyl-red);
+  // Familias tipográficas
+  --font-family-main: 'Komet', sans-serif;
+
+  // Tamaños básicos
+  --font-size-login-title: 40px;
+  --font-size-login-paragraph: 18px;
+  --font-size-login-label: 20px;
+  --font-size-profile-hello: 40px;
+  --font-size-profile-name: 40px;
+
+  // Peso de fuente
+  --font-weight-light: 300;
+  --font-weight-heavy: 800;
+}

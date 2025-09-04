@@ -1,0 +1,7 @@
+{
+  "name": "vinyl-library",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

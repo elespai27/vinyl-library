@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="form-container login-page">
+    <img src="assets/img/logo.svg" alt="Vinyl Library logo" class="login-logo" />
+    <h1 class="login-title">VINYL<br />LIBRARY</h1>
+    <p class="login-paragraph">
+      Organize, explore, and track your entire vinyl collection with ease. Discover new records,
+      filter by artist or genre, and enjoy your music archive—all in one place. Your personal vinyl world starts here!
+    </p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Email input -->
+      <div class="custom-input-group">
+        <input
+          type="email"
+          formControlName="email"
+          class="custom-input"
+          placeholder="email">
+      </div>
+      <!-- Password input con icono ojo -->
+      <div class="custom-input-group">
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          formControlName="password"
+          class="custom-input"
+          placeholder="password">
+        <button type="button" class="icon-eye-btn" (click)="showPassword = !showPassword">
+          <ion-icon [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+        </button>
+      </div>
+
+      <button class="login-btn" type="submit" [disabled]="form.invalid">Login</button>
+      <button class="signup-btn" type="button" [routerLink]="['/register']">Sing Up</button>
+    </form>
+  </div>
+</ion-content>

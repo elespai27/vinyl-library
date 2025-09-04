@@ -1,0 +1,36 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem 0 1rem;
+  min-height: 100vh;
+  background: var(--background-color); // blanco
+}
+
+.login-logo {
+  width: 160px;
+  margin-bottom: 1.5rem;
+  display: block;
+  color: var(--ion-color-quinary);
+}
+
+.custom-input-group {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.icon-eye-btn {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--ion-color-quinary);
+  font-size: 1.3em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
