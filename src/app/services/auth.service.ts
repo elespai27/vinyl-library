@@ -7,6 +7,10 @@ import { from, Observable } from 'rxjs';
 })
 export class AuthService {
   private auth: Auth = inject(Auth);
+  //mirar esta forma y la tradicional de constructor(private auth: Auth) { }
+  // por qué está forma está generando warnings en la consola?
+
+  constructor() { }
 
   register(email: string, password: string): Observable<UserCredential> {
     return from(createUserWithEmailAndPassword(this.auth, email, password));

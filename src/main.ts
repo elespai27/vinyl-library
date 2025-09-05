@@ -33,27 +33,22 @@ bootstrapApplication(AppComponent, {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
+
+    // Firebase con configuración correcta para Angular
     provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
-    provideAuth(() => getAuth()),
+    provideAuth(() => {
+      const auth = getAuth();
+      // Configuración para evitar warnings de zona
+      auth.settings.appVerificationDisabledForTesting = false;
+      return auth;
+    }),
     provideFirestore(() => getFirestore()),
-    provideFirebaseApp(() =>
-      initializeApp({
-        projectId: 'vinyl-library-7b7c5',
-        appId: '1:91528022194:web:ce87d371671b364ee6a1ab',
-        storageBucket: 'vinyl-library-7b7c5.firebasestorage.app',
-        apiKey: 'AIzaSyCVdiz-B0kfjXQQkSFcpxn9sswEUsVz1as',
-        authDomain: 'vinyl-library-7b7c5.firebaseapp.com',
-        messagingSenderId: '91528022194',
-        measurementId: 'G-PQCNDX703X',
-      })
-    ),
-    provideAuth(() => getAuth()),
     provideAnalytics(() => getAnalytics()),
-    ScreenTrackingService,
-    UserTrackingService,
-    provideFirestore(() => getFirestore()),
     provideMessaging(() => getMessaging()),
     provideStorage(() => getStorage()),
+
+    ScreenTrackingService,
+    UserTrackingService,
   ],
 });
 

@@ -1,8 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, Validators, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import {
-  IonContent, IonIcon } from '@ionic/angular/standalone';
+  FormsModule,
+  Validators,
+  FormBuilder,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { IonContent, IonIcon } from '@ionic/angular/standalone';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
@@ -11,12 +15,13 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [IonIcon,
+  imports: [
+    IonIcon,
     IonContent,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
   ],
 })
 export class LoginPage {
