@@ -1,11 +1,18 @@
 <ion-content>
-  <div class="form-container login-page">
-    <img src="assets/img/logo.svg" alt="Vinyl Library logo" class="login-logo" />
-    <h1 class="login-title">VINYL<br />LIBRARY</h1>
-    <p class="login-paragraph">
-      Organize, explore, and track your entire vinyl collection with ease. Discover new records,
-      filter by artist or genre, and enjoy your music archive—all in one place. Your personal vinyl world starts here!
-    </p>
+  <div class="container login-page">
+    <div class="top-login">
+      <img
+        src="assets/img/logo.svg"
+        alt="Vinyl Library logo"
+        class="login-logo"
+      />
+      <h1 class="login-title">VINYL<br />LIBRARY</h1>
+      <p class="login-paragraph">
+        Organize, explore, and track your entire vinyl collection with ease.
+        Discover new records, filter by artist or genre, and enjoy your music
+        archive—all in one place. Your personal vinyl world starts here!
+      </p>
+    </div>
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <!-- Email input -->
@@ -14,7 +21,8 @@
           type="email"
           formControlName="email"
           class="custom-input"
-          placeholder="email">
+          placeholder="Email"
+        />
       </div>
       <!-- Password input con icono ojo -->
       <div class="custom-input-group">
@@ -22,14 +30,23 @@
           [type]="showPassword ? 'text' : 'password'"
           formControlName="password"
           class="custom-input"
-          placeholder="password">
-        <button type="button" class="icon-eye-btn" (click)="showPassword = !showPassword">
-          <ion-icon [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+          placeholder="Password"
+        />
+        <button
+          type="button"
+          class="icon-eye-btn"
+          (click)="showPassword = !showPassword"
+        >
+          <ion-icon
+            [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"
+          ></ion-icon>
         </button>
       </div>
 
-      <button class="login-btn" type="submit" [disabled]="form.invalid">Login</button>
-      <button class="signup-btn" type="button" [routerLink]="['/register']">Sing Up</button>
+      <button class="btn" type="submit" [disabled]="form.invalid">Login</button>
+      <button class="btn" type="button" [routerLink]="['/register']">
+        Sign up
+      </button>
     </form>
   </div>
 </ion-content>

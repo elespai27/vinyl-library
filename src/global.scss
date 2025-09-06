@@ -34,7 +34,7 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
 
 .login-title {
   font-family: var(--font-family-main);
@@ -42,10 +42,11 @@
   font-weight: var(--font-weight-heavy);
   color: var(--accent-color);
   text-align: center;
+  text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
 }
 
 .login-paragraph {
-   font-family: var(--font-family-main);
+  font-family: var(--font-family-main);
   font-size: var(--font-size-login-paragraph);
   font-weight: var(--font-weight-light);
   color: var(--vinyl-lavender);
@@ -89,8 +90,7 @@
   color: var(--vinyl-lavender);
   opacity: 1;
 }
-.login-btn,
-.signup-btn {
+.btn {
   width: 100%;
   border-radius: 28px;
   border: 2px solid var(--vinyl-lavender);
@@ -103,8 +103,15 @@
   padding: 0.9rem 0;
   transition: background 0.2s, color 0.2s;
 }
+.btn:hover {
+  background-color: var(--vinyl-lavender);
+  color: var(--vinyl-white);
+}
 
-.login-btn:disabled {
+.btn:disabled,
+.btn:hover:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  background-color: initial;
+  color: var(--vinyl-lavender);
 }
